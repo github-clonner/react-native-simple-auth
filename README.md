@@ -58,7 +58,7 @@ Providers Setup
 ### Twitter
 - Create an app on https://apps.twitter.com
 - You can put any valid URL as the callback url.
-- Your configuration object should contain the 'Consumer Key (API Key)' as `appId`, the 'Consumer Secret' ass `appSecret` and the Twitter `App name` in the `callback`, eg
+- Your configuration object should contain the 'Consumer Key (API Key)' as `appId`, the 'Consumer Secret' as `appSecret` and the Twitter `App name` in the `callback`, eg
 ```js
 {
   appId: 'abc1234567890',
@@ -72,7 +72,7 @@ Providers Setup
 ### Tumblr
 - Create an app on https://www.tumblr.com/oauth/apps
 - You can put any valid URL as the callback url.
-- Your configuration object should contain the 'OAuth Consumer Key' as `appId`, the 'OAuth Consumer Secret' ass `appSecret` and any `callback`, eg
+- Your configuration object should contain the 'OAuth Consumer Key' as `appId`, the 'OAuth Consumer Secret' as `appSecret` and any `callback`, eg
 ```js
 {
   appId: '1234567890abc',
@@ -82,6 +82,18 @@ Providers Setup
 ```
 - Add the deep link scheme for the callback (Your App Name, eg `testapp`) to your `AndroidManifest.xml` eg https://github.com/adamjmcgrath/ReactNativeSimpleAuthExample/blob/master/android/app/src/main/AndroidManifest.xml#L28-L33
 - Add the deep link scheme for the callback to your iOS app, eg https://dev.twitter.com/cards/mobile/url-schemes (Due to A Facebook bug, this should always be the top one in the list)
+
+### Untappd
+- Create an app on https://untappd.com/api/register
+- Use a custom app prefix for the callback url.
+- Your configuration object should contain the app id and your callback url e.g.
+```js
+{
+  appId: '123456789',
+  callback: 'testapp://authorize',
+}
+```
+- Register your deep link scheme with android and ios as described for other apps.
 
 Usage
 =====
